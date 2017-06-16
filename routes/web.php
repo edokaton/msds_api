@@ -11,10 +11,10 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('test');
-// });
+ Route::get('/', function () {
+     return view('welcome');
+ });
 
-Route::resource('/', 'MsdsController');
+//Route::resource('/', 'MsdsController');
 
 Route::resource('msds', 'MsdsController');
