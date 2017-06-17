@@ -41,10 +41,10 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', 'edokaton.tk'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'msds_api'),
-            'username' => env('DB_USERNAME', 'root'),
+            'username' => env('DB_USERNAME', 'eksgale'),
             'password' => env('DB_PASSWORD', 'edokaton32'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
