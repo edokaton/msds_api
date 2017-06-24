@@ -13,13 +13,17 @@ class MsdsTable extends Migration
      */
     public function up()
     {
-        Schema::create('msds', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('symbol_url');
-            $table->string('nama')->unique();
-            $table->text('content');
-            $table->timestamps();
-        });
+        if (Schema::hasTable('msds')) {
+            //
+        } else {
+            Schema::create('msds', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('symbol_url');
+                $table->string('nama')->unique();
+                $table->text('content');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

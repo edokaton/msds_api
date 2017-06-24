@@ -13,13 +13,17 @@ class PenggunaTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengguna', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
+        if (Schema::hasTable('pengguna')) {
+            //
+        } else {
+            Schema::create('pengguna', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('username')->unique();
+                $table->string('password');
+                $table->rememberToken();            
+                $table->timestamps();
+            });
+        }
     }
 
     /**

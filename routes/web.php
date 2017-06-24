@@ -15,6 +15,6 @@
      return view('welcome');
  });
 
-//Route::resource('/', 'MsdsController');
+Auth::routes();
 
-Route::resource('msds', 'MsdsController');
+Route::get('/home', 'HomeController@index')->name('home');

@@ -13,15 +13,19 @@ class ReportTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
-        Schema::create('report_pengguna', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_pengguna');
-            $table->text('content');
-            $table->timestamps();
+        if (Schema::hasTable('report_pengguna')) {
+            //
+        } else {
+            Schema::enableForeignKeyConstraints();
+            Schema::create('report_pengguna', function (Blueprint $table) {
+                $table->increments('id');
+                $table->integer('id_pengguna');
+                $table->text('content');
+                $table->timestamps();
 
-            // $table->foreign('id_pengguna')->references('id')->on('pengguna');
-        });
+                // $table->foreign('id_pengguna')->references('id')->on('pengguna');
+            });
+        }
     }
 
     /**

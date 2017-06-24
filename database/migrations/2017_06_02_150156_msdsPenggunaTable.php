@@ -13,16 +13,20 @@ class MsdsPenggunaTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
-        Schema::create('msds_pengguna', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_msds');
-            $table->integer('id_pengguna');
-            $table->timestamps();
+        if (Schema::hasTable('msds_pengguna')) {
+            //
+        } else {
+            Schema::enableForeignKeyConstraints();
+            Schema::create('msds_pengguna', function (Blueprint $table) {
+                $table->increments('id');
+                $table->integer('id_msds');
+                $table->integer('id_pengguna');
+                $table->timestamps();
 
-            // $table->foreign('id_msds')->references('id')->on('msds');
-            // $table->foreign('id_pengguna')->references('id')->on('pengguna');
-        });
+                // $table->foreign('id_msds')->references('id')->on('msds');
+                // $table->foreign('id_pengguna')->references('id')->on('pengguna');
+            });
+        }
     }
 
     /**
