@@ -26,8 +26,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'api_token', 'password', 'remember_token',
+        'api_token', 'password', 'remember_token', 'tipe',
     ];
+
+    public function username()
+    {
+        return 'username';
+    }
     
     public function userReportData()
     {
