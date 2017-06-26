@@ -54,10 +54,6 @@ class MsdsController extends Controller
                     ->orWhere('content', 'LIKE', '%'.$search.'%')
                     ->get();
 
-        if(count($msds) == 0){
-            $msds = 'Data yang Anda cari tidak ada';
-        }
-
         return response()->json([
             'msds' => $msds
         ]);
