@@ -55,7 +55,7 @@ class MsdsController extends Controller
                     ->get();
 
         if(count($msds) == 0){
-            $msds == 'Data yang Anda cari tidak ada';
+            $msds = 'Data yang Anda cari tidak ada';
         }
 
         return response()->json([
