@@ -59,9 +59,7 @@ class MsdsController extends Controller
                 'id' => 1,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Data yang Anda cari tidak ada',
-                'content' => (object) array(
-                    'kontent' => 'Data yang Anda cari tidak ada'
-                )
+                'content' =>  'Data yang Anda cari tidak ada'
             );
         }
 
@@ -116,9 +114,7 @@ class MsdsController extends Controller
                 'id' => 1,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => (object) array(
-                    'kontent' => 'Pilih zat kimia'
-                )
+                'content' => 'Pilih zat kimia'
             );
         }
 
@@ -127,9 +123,7 @@ class MsdsController extends Controller
                 'id' => 2,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => (object) array(
-                    'kontent' => 'Pilih zat kimia'
-                )                 
+                'content' => 'Pilih zat kimia'
             );
         }
 
