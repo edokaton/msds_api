@@ -54,6 +54,17 @@ class MsdsController extends Controller
                     ->orWhere('content', 'LIKE', '%'.$search.'%')
                     ->get();
 
+        if(count($msds) == 0){
+            $msds = (object) array(
+                'id' => 1,
+                'symbol_url' => 'null.jpg',
+                'nama' => 'Data yang Anda cari tidak ada',
+                'content' => (object) array(
+                    'kontent' => 'Data yang Anda cari tidak ada'
+                )
+            );
+        }
+
         return response()->json([
             'msds' => $msds
         ]);
@@ -94,36 +105,32 @@ class MsdsController extends Controller
     }
 
     public function compare($first="", $second=""){
-        $firstq = Msds::where('nama', 'LIKE', '%'.$first.'%')                    
+        $firstq = Msds::where('nama', 'LIKE', '%'.$first.'%')
                     ->first();
 
-        $secondq = Msds::where('nama', 'LIKE', '%'.$second.'%')                    
+        $secondq = Msds::where('nama', 'LIKE', '%'.$second.'%')
                     ->first();
 
         if($first == ""){
-            $firstq = {
-                "msds" : {
-                    "id" : 1,
-                    "symbol_url": "asd.jpg",
-                    "nama": "Pilih zat kimia",
-                    "content": "{
-                        konten : "Pilih zat kimia"
-                    }"
-                }
-            };
+            $firstq = (object) array(
+                'id' => 1,
+                'symbol_url' => 'null.jpg',
+                'nama' => 'Pilih zat kimia',
+                'content' => (object) array(
+                    'kontent' => 'Pilih zat kimia'
+                )
+            );
         }
 
         if($second == ""){
-            $secondq = {
-                "msds" : {
-                    "id" : 1,
-                    "symbol_url": "asd.jpg",
-                    "nama": "Pilih zat kimia",
-                    "content": "{
-                        konten : "Pilih zat kimia"
-                    }"
-                }
-            };
+            $secondq = (object) array(
+                'id' => 2,
+                'symbol_url' => 'null.jpg',
+                'nama' => 'Pilih zat kimia',
+                'content' => (object) array(
+                    'kontent' => 'Pilih zat kimia'
+                )                 
+            );
         }
 
         return response()->json([
