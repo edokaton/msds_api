@@ -100,6 +100,32 @@ class MsdsController extends Controller
         $secondq = Msds::where('nama', 'LIKE', '%'.$second.'%')                    
                     ->first();
 
+        if($first == ""){
+            $firstq = {
+                "msds" : {
+                    "id" : 1,
+                    "symbol_url": "asd.jpg",
+                    "nama": "Pilih zat kimia",
+                    "content": "{
+                        konten : "Pilih zat kimia"
+                    }"
+                }
+            };
+        }
+
+        if($second == ""){
+            $secondq = {
+                "msds" : {
+                    "id" : 1,
+                    "symbol_url": "asd.jpg",
+                    "nama": "Pilih zat kimia",
+                    "content": "{
+                        konten : "Pilih zat kimia"
+                    }"
+                }
+            };
+        }
+
         return response()->json([
             'msds' => $firstq,
             'msdstwo' => $secondq
