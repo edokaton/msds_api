@@ -8,6 +8,10 @@ class MsdsPengguna extends Model
 {
 	protected $table = 'msds_pengguna';
 
+	protected $fillable = [
+		'id_msds', 'id_pengguna',
+	];
+
     public function foreignKeyMsds()
     {
         return $this->belongsTo('App\Msds', 'id_msds');

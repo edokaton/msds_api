@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')->resource('msds', 'MsdsController');
+
+Route::middleware('auth:api')->get('compare/{first?}/{second?}', 'MsdsController@compare');

@@ -92,4 +92,17 @@ class MsdsController extends Controller
     {
         //
     }
+
+    public function compare($first="", $second=""){
+        $firstq = Msds::where('nama', 'LIKE', '%'.$first.'%')                    
+                    ->first();
+
+        $secondq = Msds::where('nama', 'LIKE', '%'.$second.'%')                    
+                    ->first();
+
+        return response()->json([
+            'msds' => $firstq,
+            'msdstwo' => $secondq
+        ]);
+    }
 }

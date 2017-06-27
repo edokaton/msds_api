@@ -9,7 +9,7 @@ class Msds extends Model
     protected $table = 'msds';
 
     protected $fillable = [
-        'username', 'password',
+        'symbol_url', 'nama', 'content',
     ];
 
     public function savedmsds()
