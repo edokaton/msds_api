@@ -55,13 +55,17 @@ class MsdsController extends Controller
                     ->get();
 
         if(count($msds) == 0){
-            $msds = (object) array(
-                'id' => 1,
-                'symbol_url' => 'null.jpg',
-                'nama' => 'Data yang Anda cari tidak ada',
-                'content' =>  'Data yang Anda cari tidak ada'
+            $msds = array(
+                (object) array(
+                    'id' => 1,
+                    'symbol_url' => 'null.jpg',
+                    'nama' => 'Data yang Anda cari tidak ada',
+                    'content' =>  ''
+                )
             );
         }
+
+
 
         return response()->json([
             'msds' => $msds
@@ -114,7 +118,7 @@ class MsdsController extends Controller
                 'id' => 1,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => 'Pilih zat kimia'
+                'content' => ''
             );
         }
 
@@ -123,7 +127,7 @@ class MsdsController extends Controller
                 'id' => 2,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => 'Pilih zat kimia'
+                'content' => ''
             );
         }
 
