@@ -113,7 +113,7 @@ class MsdsController extends Controller
         $secondq = Msds::where('nama', 'LIKE', '%'.$second.'%')
                     ->first();
 
-        if($first == ""){
+        if($first == "" || count($firstq) == 0){
             $firstq = (object) array(
                 'id' => 1,
                 'symbol_url' => 'null.jpg',
@@ -122,7 +122,7 @@ class MsdsController extends Controller
             );
         }
 
-        if($second == ""){
+        if($second == "" || count($secondq) == 0){
             $secondq = (object) array(
                 'id' => 2,
                 'symbol_url' => 'null.jpg',
