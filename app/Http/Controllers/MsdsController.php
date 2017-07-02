@@ -144,7 +144,10 @@ class MsdsController extends Controller
                     ->first();
 
         return response()->json([
-            'msds' => $msds
+            'msds' => $msds->content
         ]);
+        // dd($msds);
+
+        // return response()->json($msds->content);
     }
 }
