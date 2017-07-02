@@ -114,20 +114,16 @@ class MsdsController extends Controller
                     ->first();
 
         if($first == "" || count($firstq) == 0){
-            $firstq = (object) array(
-                'id' => 1,
-                'symbol_url' => 'null.jpg',
-                'nama' => 'Pilih zat kimia',
-                'content' => ''
+            $firstq->nama = "Pilih zat kimia";
+            $firstq->content = (object) array(
+                'konten_1' => ''
             );
         }
 
         if($second == "" || count($secondq) == 0){
-            $secondq = (object) array(
-                'id' => 2,
-                'symbol_url' => 'null.jpg',
-                'nama' => 'Pilih zat kimia',
-                'content' => ''
+            $secondq->nama = "Pilih zat kimia";
+            $secondq->content = (object) array(
+                'konten_1' => ''
             );
         }
 
