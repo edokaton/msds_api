@@ -136,4 +136,15 @@ class MsdsController extends Controller
             'msdstwo' => $secondq
         ]);
     }
+
+    public function detail($zat)
+    {
+        $msds = Msds::select('content')
+                    ->where('nama', $zat)
+                    ->first();
+
+        return response()->json([
+            'content' => $msds
+        ]);
+    }
 }
