@@ -137,14 +137,14 @@ class MsdsController extends Controller
         ]);
     }
 
-    public function detail($zat)
+    public function DetailZat($zat)
     {
         $msds = Msds::select('content')
                     ->where('nama', $zat)
                     ->first();
 
         return response()->json([
-            'content' => $msds
+            'msds' => $msds
         ]);
     }
 }
