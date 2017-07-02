@@ -118,7 +118,9 @@ class MsdsController extends Controller
                 'id' => 1,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => ''
+                'content' => (object) array(
+                    'konten_1' => ''
+                )
             );
         }
 
@@ -127,7 +129,9 @@ class MsdsController extends Controller
                 'id' => 2,
                 'symbol_url' => 'null.jpg',
                 'nama' => 'Pilih zat kimia',
-                'content' => ''
+                'content' => (object) array(
+                    'konten_1' => ''
+                )
             );
         }
 
