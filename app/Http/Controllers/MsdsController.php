@@ -132,8 +132,10 @@ class MsdsController extends Controller
         }
 
         return response()->json([
-            'msds' => $firstq,
-            'msdstwo' => $secondq
+            'msds_name' => $firstq->nama,
+            'msds_content' => $firstq->content,
+            'msdstwo_name' => $secondq->nama,
+            'msdstwo_content' => $secondq->content
         ]);
     }
 
@@ -145,9 +147,6 @@ class MsdsController extends Controller
 
         return response()->json([
             'msds' => $msds->content
-        ]);
-        // dd($msds);
-
-        // return response()->json($msds->content);
+        ]);        
     }
 }
