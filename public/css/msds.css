@@ -1,0 +1,578 @@
+@font-face
+{
+    font-family: 'dine';
+
+    src: url('../font/dinengschrift.ttf');
+}
+
+@font-face
+{
+    font-family: 'century';
+
+    src: url('../font/century-gothic.ttf');
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+
+    background-color: #ebeff5;
+}
+
+/*halaman login*/
+.login-modal
+{
+    display: block;
+
+    width: 32%;
+    margin: 4% auto 0;
+
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.logo-wrapper
+{
+    display: block;
+
+    width: 100%;
+    padding: 20px 0 10px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+.login-logo
+{
+    width: 25%;
+}
+
+.logo-wrapper > p:first-of-type {
+    margin-top: 10px;
+}
+
+.logo-wrapper > p {
+    color: #081094;
+    font-weight: bold;
+    margin: 0;
+}
+
+.login-input-wrapper
+{
+    width: 100%;
+    padding: 20px 40px;
+
+    text-align: center;
+}
+
+.login-input-wrapper .form-group
+{
+    text-align: left;
+}
+
+.login-input-wrapper .form-group
+{
+    text-align: left;
+}
+
+.login-submit
+{
+    background-color: #0283df;
+    background-image: none;
+    border-radius: 20px;
+    height: 40px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.copyright{
+    margin-top: 50px;
+
+    text-align: center;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+.powered-by
+{
+    text-align: center;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+/*menu utama*/
+.blue-line
+{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+
+    width: 100%;
+
+    border-top: 5px solid #0283DF;
+}
+
+
+/*navbar*/
+.main-navbar
+{
+    position: fixed;
+    z-index: 9;
+    top: 5px;
+
+    width: 100%;
+    height: auto;
+
+    border-bottom: 2px solid #ccc;
+    background-color: #fff;
+}
+
+.navbar-dropdown
+{
+    padding: 15px 20px;
+
+    list-style: outside none none;
+}
+
+.main-navbar-toggle
+{
+    font-size: 18px;
+
+    color: #222;
+}
+
+.main-navbar-toggle:hover,
+.main-navbar-toggle:focus
+{
+    text-decoration: none;
+
+    color: #222;
+}
+
+.main-navbar-ul
+{
+    top: 50px;
+    right: 15px;
+    left: initial;
+}
+
+.main-navbar-li > a
+{
+    font-size: 16px;
+}
+
+
+/*sidebar*/
+.sidebar-container
+{
+    font-family: 'century', sans-serif!important;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 20%;
+    height: 100%;
+
+    color: #fff;
+    background-color: #333645;
+}
+
+.sidebar-logo {
+    background-color: #f2f2f2;
+    padding: 10px 0 5px;
+    text-align: center;
+}
+
+.sidebar-logo-image {
+    width: 90%;
+}
+
+.sidebar-title
+{
+    height: auto;
+    padding: 5px 15px;
+
+    border-bottom: 2px solid #0283DF;
+    background-color: #333645;
+}
+
+.sidebar-title > p
+{
+    font-size: 24px;
+
+    font-family: 'dine', sans-serif;
+
+    margin: 0;
+}
+
+.sidebar-menu
+{
+    display: block;
+    /*overflow-y: auto;*/
+
+    width: 100%;
+    /*height: 480px;*/
+    height: auto;
+}
+
+.sidebar-ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: outside none none;
+
+    border-bottom: 2px solid #333645;
+}
+
+.sidebar-li
+{
+    display: block;
+
+    padding: 10px 15px;
+
+    list-style: outside none none;
+
+    color: #fff;
+}
+
+.sidebar-li.datauser:hover, .sidebar-li.datauser.active
+{
+    background-color: #262932;
+    border-left: 3px solid #ff6a44;
+}
+
+.sidebar-li.kelembagaan:hover, .sidebar-li.kelembagaan.active
+{
+    background-color: #262932;
+    border-left: 3px solid #7B4AFF;
+}
+
+.sidebar-li.sdm:hover, .sidebar-li.sdm.active
+{
+    background-color: #262932;
+    border-left: 3px solid #7B4AFF;
+}
+
+.sidebar-li.kegiatan:hover, .sidebar-li.kegiatan.active
+{
+    background-color: #262932;
+    border-left: 3px solid #45BB67;
+}
+
+.sidebar-li.sarpras:hover, .sidebar-li.sarpras.active
+{
+    background-color: #262932;
+    border-left: 3px solid #17A8FF;
+}
+
+.sidebar-li.berita:hover, .sidebar-li.berita.active
+{
+    background-color: #262932;
+    border-left: 3px solid #F9CF49;
+}
+
+.sidebar-li.kompetisi:hover, .sidebar-li.kompetisi.active
+{
+    background-color: #262932;
+    border-left: 3px solid #03ADFF;
+}
+
+.sidebar-icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 22px;
+}
+
+.sidebar-anchor
+{
+    display: block;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.sidebar-anchor:hover,
+.sidebar-anchor:focus
+{
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.sidebar-anchor p {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0;
+    display: inline-block;
+}
+
+.sidebar-sub-ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: outside none none;
+}
+
+.sidebar-sub-li
+{
+    padding: 10px 60px;
+
+    background-color: #262932;
+}
+
+.sidebar-sub-li:hover
+{
+    background-color: #333645;
+}
+
+.sidebar-sub-anchor
+{
+    font-size: 18px;
+
+    text-decoration: none;
+    letter-spacing: .5px;
+
+    color: #fff;
+}
+
+.sidebar-sub-anchor:hover,
+.sidebar-sub-anchor:focus
+{
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+/*main view*/
+.main-view
+{
+    float: right;
+
+    width: 80%;
+    margin-top: 65px;
+    padding: 20px 15px;
+}
+
+
+/*table*/
+.create-new-data{
+    margin-bottom: 10px;
+}
+
+.create-new-data button {
+    background-color: #e83338;
+    border-color: #e83338;
+}
+
+.datatable-container {
+    background-color: #fff;
+    border-radius: 4px;
+    border-top: 2px solid #ddd;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.datatable-title {
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.datatable-title > img {
+    float: left;
+    width: 20px;
+}
+
+.datatable-title > p {
+    float: left;
+    font-family: century;
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+#prstable {
+    background-color: #fff;
+}
+
+tbody > tr > td:last-of-type{
+    text-align: center;
+    width: 120px;
+}
+
+.action-anchor, .action-anchor:hover{
+    text-decoration: none;
+}
+
+.action-btn {
+    width: 50px;
+    cursor: pointer;
+}
+
+
+/*modal*/
+.modal-dialog.delete {
+    margin-top: 15%;
+}
+
+.modal-header.custom {
+    background-color: #0f1923;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+}
+
+.modal-header.custom .close {
+    color: #fff;
+    opacity: 1;
+}
+
+.custom-modal-form .form-group {
+    margin: 30px 0;
+}
+
+.custom-modal-form .control-label{
+    text-align: left;
+}
+
+.modal-footer.custom {
+    border: medium none;
+    padding: 30px 0 70px;
+    text-align: center;
+}
+
+.modal-footer.delete {
+    border: medium none;
+    padding: 30px 0;
+    text-align: center;    
+}
+
+.modal-footer.delete > form {
+    width: auto;
+    display: inline-block;
+}
+
+.modal-footer-anchor, .modal-footer-anchor:hover{
+    text-decoration: none;
+}
+
+.submit-btn {
+    background-color: #2978f9;
+    border-color: #2978f9;
+    min-width: 120px;
+    width: auto;
+}
+
+.delete-submit-btn {
+    background-color: #E83338;
+    border-color: #E83338;
+    min-width: 120px;
+    width: auto;
+}
+
+.cancel-btn {
+    background-color: #45bc62;
+    border-color: #45bc62;
+    min-width: 120px;
+    width: auto;
+}
+
+.delete-cancel-btn {
+    background-color: #2978f9;
+    border-color: #2978f9;
+    min-width: 120px;
+    width: auto;
+}
+
+
+/*create*/
+.create-form-container {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.create-form-title {
+    border-bottom: 2px solid #ddd;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.create-form-title > p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.create-form-wrapper {
+    padding: 15px;
+    text-align: center;
+}
+
+.create-form-wrapper div {
+    text-align: left;
+}
+
+.img-placeholder-wrapper {
+    display: block;
+    height: auto;
+    margin: auto;
+    text-align: center !important;
+    width: 100%;
+}
+
+.img-placeholder-wrapper > p {
+    font-size: 18px;
+    text-align: left;
+}
+
+.img-placeholder {
+    background-color: #d5d4df;
+    border-radius: 5px;
+    height: 170px;
+    margin: 0 10px;
+    object-fit: contain;
+    object-position: center center;
+    width: 29%;
+    cursor: pointer;
+}
+
+.create-form-submit {
+    background-color: #e83338;
+    border-color: #e83338;
+    margin: 80px 50px;
+    min-width: 120px;
+}
+
+.addrank {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img-uploader{
+    visibility: hidden;
+}
+
+.uploaded-img {
+    border-radius: 5px;
+    width: 35%;
+    cursor: pointer;
+}
+
+.upload-instruction{
+    color: red;
+    width: 100%;
+    display: block;
+    margin:10px;
+}

@@ -14,7 +14,7 @@ class Pengguna extends Model
      * @var array
      */
     protected $fillable = [
-        'username', 'password',
+        'username', 'password', 'tipe', 'api_token',
     ];
 
     /**
@@ -26,8 +26,8 @@ class Pengguna extends Model
         'api_token', 'password', 'remember_token',
     ];
 
-    public function userReportData()
+    public function report()
     {
-        return $this->hasMany('App\ReportData');
+        return $this->hasMany('App\ReportData', 'id');
     }
 }

@@ -28,7 +28,7 @@ class MsdsController extends Controller
      */
     public function create()
     {
-        //
+        return view('create.msds');
     }
 
     /**
@@ -39,7 +39,70 @@ class MsdsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'konten1' => 'required',
+            'konten2' => 'required',
+            'konten3' => 'required',
+            'konten4' => 'required',
+            'konten5' => 'required',
+            'konten6' => 'required',
+            'konten7' => 'required',
+            'konten8' => 'required',
+            'konten9' => 'required',
+            'konten10' => 'required',
+            'konten11' => 'required',
+            'konten12' => 'required',
+            'konten13' => 'required',
+            'konten14' => 'required',
+            'konten15' => 'required',
+            'konten16' => 'required',
+        ]);
+
+        $var1 = preg_replace( "/\r|\n/", '', $request->konten1 );
+        $var2 = preg_replace( "/\r|\n/", '', $request->konten2 );
+        $var3 = preg_replace( "/\r|\n/", '', $request->konten3 );
+        $var4 = preg_replace( "/\r|\n/", '', $request->konten4 );
+        $var5 = preg_replace( "/\r|\n/", '', $request->konten5 );
+        $var6 = preg_replace( "/\r|\n/", '', $request->konten6 );
+        $var7 = preg_replace( "/\r|\n/", '', $request->konten7 );
+        $var8 = preg_replace( "/\r|\n/", '', $request->konten8 );
+        $var9 = preg_replace( "/\r|\n/", '', $request->konten9 );
+        $var10 = preg_replace( "/\r|\n/", '', $request->konten10 );
+        $var11 = preg_replace( "/\r|\n/", '', $request->konten11 );
+        $var12 = preg_replace( "/\r|\n/", '', $request->konten12 );
+        $var13 = preg_replace( "/\r|\n/", '', $request->konten13 );
+        $var14 = preg_replace( "/\r|\n/", '', $request->konten14 );
+        $var15 = preg_replace( "/\r|\n/", '', $request->konten15 );
+        $var16 = preg_replace( "/\r|\n/", '', $request->konten16 );
+
+        $konten = (object) array(
+            'konten_1' => $var1,
+            'konten_2' => $var2,
+            'konten_3' => $var3,
+            'konten_4' => $var4,
+            'konten_5' => $var5,
+            'konten_6' => $var6,
+            'konten_7' => $var7,
+            'konten_8' => $var8,
+            'konten_9' => $var9,
+            'konten_10' => $var10,
+            'konten_11' => $var11,
+            'konten_12' => $var12,
+            'konten_13' => $var13,
+            'konten_14' => $var14,
+            'konten_15' => $var15,
+            'konten_16' => $var16,
+        );
+
+        $msds = new Msds;
+
+        $msds->nama = $request->nama;
+        $msds->content = json_encode($konten);
+
+        $msds->save();
+
+        return back()->with('success', 'Data MSDS berhasil ditambahkan.');
     }
 
     /**
@@ -80,7 +143,13 @@ class MsdsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $msds = Msds::find($id);
+
+        $konten = json_decode($msds->content);
+
+        // dd($konten);
+
+        return view('update.msds', ['msds' => $msds, 'konten' => $konten]);
     }
 
     /**
@@ -92,7 +161,70 @@ class MsdsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'konten1' => 'required',
+            'konten2' => 'required',
+            'konten3' => 'required',
+            'konten4' => 'required',
+            'konten5' => 'required',
+            'konten6' => 'required',
+            'konten7' => 'required',
+            'konten8' => 'required',
+            'konten9' => 'required',
+            'konten10' => 'required',
+            'konten11' => 'required',
+            'konten12' => 'required',
+            'konten13' => 'required',
+            'konten14' => 'required',
+            'konten15' => 'required',
+            'konten16' => 'required',
+        ]);
+
+        $var1 = preg_replace( "/\r|\n/", '', $request->konten1 );
+        $var2 = preg_replace( "/\r|\n/", '', $request->konten2 );
+        $var3 = preg_replace( "/\r|\n/", '', $request->konten3 );
+        $var4 = preg_replace( "/\r|\n/", '', $request->konten4 );
+        $var5 = preg_replace( "/\r|\n/", '', $request->konten5 );
+        $var6 = preg_replace( "/\r|\n/", '', $request->konten6 );
+        $var7 = preg_replace( "/\r|\n/", '', $request->konten7 );
+        $var8 = preg_replace( "/\r|\n/", '', $request->konten8 );
+        $var9 = preg_replace( "/\r|\n/", '', $request->konten9 );
+        $var10 = preg_replace( "/\r|\n/", '', $request->konten10 );
+        $var11 = preg_replace( "/\r|\n/", '', $request->konten11 );
+        $var12 = preg_replace( "/\r|\n/", '', $request->konten12 );
+        $var13 = preg_replace( "/\r|\n/", '', $request->konten13 );
+        $var14 = preg_replace( "/\r|\n/", '', $request->konten14 );
+        $var15 = preg_replace( "/\r|\n/", '', $request->konten15 );
+        $var16 = preg_replace( "/\r|\n/", '', $request->konten16 );
+
+        $konten = (object) array(
+            'konten_1' => $var1,
+            'konten_2' => $var2,
+            'konten_3' => $var3,
+            'konten_4' => $var4,
+            'konten_5' => $var5,
+            'konten_6' => $var6,
+            'konten_7' => $var7,
+            'konten_8' => $var8,
+            'konten_9' => $var9,
+            'konten_10' => $var10,
+            'konten_11' => $var11,
+            'konten_12' => $var12,
+            'konten_13' => $var13,
+            'konten_14' => $var14,
+            'konten_15' => $var15,
+            'konten_16' => $var16,
+        );
+
+        $msds = Msds::find($id);
+
+        $msds->nama = $request->nama;
+        $msds->content = json_encode($konten);
+
+        $msds->save();
+
+        return back()->with('success', 'Data MSDS berhasil diubah.');
     }
 
     /**
@@ -103,7 +235,11 @@ class MsdsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Msds::destroy($id);
+
+        // $msds->delete();
+
+        return back()->with('deleted', 'Data berhasil dihapus');
     }
 
     public function compare($first="", $second=""){
@@ -151,6 +287,6 @@ class MsdsController extends Controller
 
         return response()->json([
             'msds' => $msds->content
-        ]);        
+        ]);
     }
 }

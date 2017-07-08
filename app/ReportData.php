@@ -12,7 +12,7 @@ class ReportData extends Model
         'id_pengguna', 'content',
     ];
 
-    public function foreignKeyPengguna()
+    public function pengguna()
     {
         return $this->belongsTo('App\Pengguna', 'id_pengguna');
     }
