@@ -13,10 +13,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::middleware('auth:api')->resource('msds', 'MsdsController');
-Route::middleware('auth:api')->get('compare/{first?}/{second?}', 'MsdsController@compare');
-Route::middleware('auth:api')->get('detail/{zat}', 'MsdsController@DetailZat');
+Route::middleware(['auth:api'])->group(function(){
+	Route::get('/user', function (Request $request) {
+	    return $request->user();
+	});
+
+	Route::resource('msds', 'MsdsController');
+	Route::get('compare/{first?}/{second?}', 'MsdsController@compare');
+	Route::get('detail/{zat}', 'MsdsController@DetailZat');
+
+	Route::post('user/feedback/{user_id}/{feedback}', 'ReportDataController@store');
+});

@@ -33,9 +33,18 @@ class ReportDataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $user_id, $feedback)
     {
-        //
+        $report = new ReportData;
+
+        $report->id_pengguna = $user_id;
+        $report->content = $feedback;
+
+        $report->save();
+
+        return response()->json([
+            'success_feed' => 'Feedback berhasil terkirim...'
+        ]);
     }
 
     /**
