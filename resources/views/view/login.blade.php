@@ -4,7 +4,7 @@
 
 	<style type="text/css" media="screen">
 		body{
-			background-image: url("{{ asset('img/pecahan/bg.png') }}");
+			background-image: url("{{ asset('img/pecahan/a.png') }}");
 			background-size: cover;
 		}
 	</style>
@@ -27,8 +27,8 @@
 					<div className="login-modal">
 						<div className="logo-wrapper">
 							<img className="login-logo" src="{{ asset('img/pecahan/logo.png') }}" alt="login logo" />
-							<p>PERSATUAN SENAM INDONESIA</p>
-							<p>(PERSANI)</p>
+							<p>MSDS</p>
+							<p>(MATERIAL SAFETY DATA SHEET)</p>
 						</div>
 						<div className="login-input-wrapper">
 							<form id="login-form" role="form" method="POST" action="{{ route('login.check') }}">
@@ -55,8 +55,8 @@
 							</form>
 						</div>
 					</div>
-					<p className="copyright">Copyright &#169; PERSANI</p>
-					<p className="powered-by">Powered by PT. Tambora Agung Makmur</p>
+					<p className="copyright">Copyright &#169; MSDS</p>
+					<p className="powered-by">Powered by Edo Katon Setiawan</p>
 				</div>
 				);
 			}
