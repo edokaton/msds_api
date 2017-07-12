@@ -26,5 +26,5 @@ Route::middleware(['auth:api'])->group(function(){
 	Route::get('compare/{first?}/{second?}', 'MsdsController@compare');
 	Route::get('detail/{zat}', 'MsdsController@DetailZat');
 
-	Route::post('user/feedback/{user_id}/{feedback}', 'ReportDataController@store');
+	Route::post('user/feedback/{user_id}/{msds_id}/{feedback}', 'ReportDataController@store');
 });

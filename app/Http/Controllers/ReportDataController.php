@@ -33,7 +33,7 @@ class ReportDataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $user_id, $feedback)
+    public function store(Request $request, $user_id, $msds_id, $feedback)
     {
         $report = new ReportData;
 
