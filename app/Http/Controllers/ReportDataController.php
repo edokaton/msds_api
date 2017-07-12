@@ -38,6 +38,7 @@ class ReportDataController extends Controller
         $report = new ReportData;
 
         $report->id_pengguna = $user_id;
+        $report->msds_id = $msds_id;
         $report->content = $feedback;
 
         $report->save();
