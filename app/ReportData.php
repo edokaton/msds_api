@@ -16,4 +16,9 @@ class ReportData extends Model
     {
         return $this->belongsTo('App\Pengguna', 'id_pengguna');
     }
+
+    public function msds()
+    {
+        return $this->belongsTo('App\Msds', 'msds_id');
+    }
 }

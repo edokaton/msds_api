@@ -34,16 +34,16 @@
 						<p>MSDS</p>
 					</li>
 				</a>
-				<a class="sidebar-anchor" href="{{ url('pengguna') }}">
+				<!-- <a class="sidebar-anchor" href="{{ url('pengguna') }}">
 					<li class="sidebar-li datauser">
 						<img src="{{ asset('img/pecahan/datauser.png') }}" alt="dashboard icon" class="sidebar-icon" />					
 						<p>Data Pengguna</p>
 					</li>
-				</a>			
-				<a class="sidebar-anchor" href="{{ url('report') }}">
+				</a>	 -->		
+				<a class="sidebar-anchor" href="{{ url('feedback') }}">
 					<li class="sidebar-li kegiatan">
 						<img src="{{ asset('img/pecahan/kegiatan.png') }}" alt="dashboard icon" class="sidebar-icon" />
-						<p>Data Report Pengguna</p>
+						<p>Feedback Pengguna</p>
 					</li>
 				</a>				
 			</ul>

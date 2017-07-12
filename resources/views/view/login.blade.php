@@ -25,8 +25,7 @@
 				return (
 				<div>
 					<div className="login-modal">
-						<div className="logo-wrapper">
-							<img className="login-logo" src="{{ asset('img/pecahan/logo.png') }}" alt="login logo" />
+						<div className="logo-wrapper">							
 							<p>MSDS</p>
 							<p>(MATERIAL SAFETY DATA SHEET)</p>
 						</div>

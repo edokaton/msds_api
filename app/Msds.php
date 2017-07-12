@@ -16,4 +16,9 @@ class Msds extends Model
     {
         return $this->hasMany('App\MsdsPengguna');
     }
+
+    public function reported_msds()
+    {
+        return $this->hasMany('App\ReportData', 'id');
+    }
 }

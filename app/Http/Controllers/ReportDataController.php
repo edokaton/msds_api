@@ -14,7 +14,9 @@ class ReportDataController extends Controller
      */
     public function index()
     {
-        //
+        $feed = ReportData::all();
+
+        return view('read.report', ['feed' => $feed]);
     }
 
     /**
@@ -33,19 +35,9 @@ class ReportDataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $user_id, $msds_id, $feedback)
+    public function store(Request $request)
     {
-        $report = new ReportData;
-
-        $report->id_pengguna = $user_id;
-        $report->msds_id = $msds_id;
-        $report->content = $feedback;
-
-        $report->save();
-
-        return response()->json([
-            'success_feed' => 'Feedback berhasil terkirim...'
-        ]);
+        
     }
 
     /**
@@ -90,6 +82,29 @@ class ReportDataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ReportData::destroy($id);
+
+        return back()->with('deleted', 'Feedback berhasil dihapus');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function feedback(Request $request, $user_id, $msds_id, $feedback)
+    {
+        $report = new ReportData;
+
+        $report->id_pengguna = $user_id;
+        $report->msds_id = $msds_id;
+        $report->content = $feedback;
+
+        $report->save();
+
+        return response()->json([
+            'success_feed' => 'Feedback berhasil terkirim...'
+        ]);
     }
 }

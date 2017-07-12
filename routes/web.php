@@ -64,9 +64,5 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
 	Route::resource('pengguna', 'PenggunaController');
 
-	// Route::get('pengguna/create', 'PenggunaController@create')->name('pengguna.create');
-	// Route::get('pengguna/edit/{id}', 'PenggunaController@edit')->name('pengguna.edit');
-	// Route::post('pengguna/store', 'PenggunaController@store')->name('pengguna.save');
-	// Route::post('pengguna/update/{id}', 'PenggunaController@update')->name('pengguna.update');
-	// Route::post('pengguna/delete/{id}', 'PenggunaController@destroy')->name('pengguna.destroy');
+	Route::resource('feedback', 'ReportDataController');
 });
