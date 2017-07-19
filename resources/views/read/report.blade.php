@@ -14,7 +14,7 @@
 					</div>
 				@endif
 				<img src="{{ asset('img/pecahan/berita2.png') }}" alt="persani berita icon" style="width: 30px;" />
-				<p>Data Report Pengguna</p>
+				<p>Feedback Pengguna</p>
 				<div class="clearfix"></div>
 			</div>
 			<div class="table-responsive">
