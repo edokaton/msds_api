@@ -115,6 +115,11 @@
 						<textarea name="konten16" id="konten16" class="form-control" rows="5" placeholder="Informasi lain yang diperlukan"></textarea>
 					</div>
 
+					<div class="form-group">
+						<label for="konten17">Informasi lain yang diperlukan</label>
+						<textarea name="konten17" id="konten17" class="form-control" rows="5" placeholder="Informasi lain yang diperlukan"></textarea>
+					</div>
+
 					<button type="submit" class="btn btn-danger create-form-submit">Submit</button>
 				</form>
 			</main>
