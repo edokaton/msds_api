@@ -36,87 +36,87 @@
 					</div>
 
 					<div class="form-group">
-						<label for="konten1">Identitas bahan dan nama perusahaan</label>
+						<label for="konten1">1</label>
 						<textarea name="konten1" id="konten1" class="form-control" rows="5" placeholder="Identitas bahan dan nama perusahaan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten2">Komposisi bahan</label>
+						<label for="konten2">2</label>
 						<textarea name="konten2" id="konten2" class="form-control" rows="5" placeholder="Komposisi bahan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten3">Identifikasi bahaya</label>
+						<label for="konten3">3</label>
 						<textarea name="konten3" id="konten3" class="form-control" rows="5" placeholder="Identifikasi bahaya"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten4">Tindakan P3K</label>
+						<label for="konten4">4</label>
 						<textarea name="konten4" id="konten4" class="form-control" rows="5" placeholder="Tindakan P3K"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten5">Tindakan penanggulangan kebakaran</label>
+						<label for="konten5">5</label>
 						<textarea name="konten5" id="konten5" class="form-control" rows="5" placeholder="Tindakan penanggulangan kebakaran"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten6">Tindakan mengatasi tumpahan dan kebocoran</label>
+						<label for="konten6">6</label>
 						<textarea name="konten6" id="konten6" class="form-control" rows="5" placeholder="Tindakan mengatasi tumpahan dan kebocoran"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten7">Penyimpanan dan penanganan bahan</label>
+						<label for="konten7">7</label>
 						<textarea name="konten7" id="konten7" class="form-control" rows="5" placeholder="Penyimpanan dan penanganan bahan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten8">Pengendalian pemajanan dan alat pelindung diri</label>
+						<label for="konten8">8</label>
 						<textarea name="konten8" id="konten8" class="form-control" rows="5" placeholder="Pengendalian pemajanan dan alat pelindung diri"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten9">Sifat fisika dan kimia</label>
+						<label for="konten9">9</label>
 						<textarea name="konten9" id="konten9" class="form-control" rows="5" placeholder="Sifat fisika dan kimia"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten10">Stabilitas dan reaktifitas bahan</label>
+						<label for="konten10">10</label>
 						<textarea name="konten10" id="konten10" class="form-control" rows="5" placeholder="Stabilitas dan reaktifitas bahan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten11">Informasi toksikologi</label>
+						<label for="konten11">11</label>
 						<textarea name="konten11" id="konten11" class="form-control" rows="5" placeholder="Informasi toksikologi"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten12">Informasi ekologi</label>
+						<label for="konten12">12</label>
 						<textarea name="konten12" id="konten12" class="form-control" rows="5" placeholder="Informasi ekologi"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten13">Pembuangan limbah</label>
+						<label for="konten13">13</label>
 						<textarea name="konten13" id="konten13" class="form-control" rows="5" placeholder="Pembuangan limbah"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten14">Pengangkutan bahan</label>
+						<label for="konten14">14</label>
 						<textarea name="konten14" id="konten14" class="form-control" rows="5" placeholder="Pengangkutan bahan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten15">Informasi peraturan perundangan yang berlaku</label>
+						<label for="konten15">15</label>
 						<textarea name="konten15" id="konten15" class="form-control" rows="5" placeholder="Informasi peraturan perundangan yang berlaku"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten16">Informasi lain yang diperlukan</label>
+						<label for="konten16">16</label>
 						<textarea name="konten16" id="konten16" class="form-control" rows="5" placeholder="Informasi lain yang diperlukan"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for="konten17">Informasi lain yang diperlukan</label>
+						<label for="konten17">17</label>
 						<textarea name="konten17" id="konten17" class="form-control" rows="5" placeholder="Informasi lain yang diperlukan"></textarea>
 					</div>
 
