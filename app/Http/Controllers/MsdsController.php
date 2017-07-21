@@ -218,7 +218,7 @@ class MsdsController extends Controller
             'konten_14' => $request->konten14,
             'konten_15' => $request->konten15,
             'konten_16' => $request->konten16,
-            'konten_17' => $request->konten16,
+            'konten_17' => $request->konten17,
         );
 
         $msds = Msds::find($id);
