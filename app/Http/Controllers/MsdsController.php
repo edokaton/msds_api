@@ -14,7 +14,7 @@ class MsdsController extends Controller
      */
     public function index()
     {
-        $msds = Msds::all();
+        $msds = Msds::orderBy('nama', 'asc')->get();
 
         return response()->json([
             'msds' => $msds
@@ -57,7 +57,7 @@ class MsdsController extends Controller
             'konten14' => 'required',
             'konten15' => 'required',
             'konten16' => 'required',
-            'konten17' => 'required',
+            // 'konten17' => 'required',
         ]);
 
         // $var1 = preg_replace( "/\r|\n/", '', $request->konten1 );
@@ -94,7 +94,7 @@ class MsdsController extends Controller
             'konten_14' => $request->konten14,
             'konten_15' => $request->konten15,
             'konten_16' => $request->konten16,
-            'konten_17' => $request->konten16,
+            // 'konten_17' => $request->konten16,
         );
 
         $msds = new Msds;
@@ -117,6 +117,7 @@ class MsdsController extends Controller
     {
         $msds = Msds::where('nama', 'LIKE', '%'.$search.'%')
                     ->orWhere('content', 'LIKE', '%'.$search.'%')
+                    ->orderBy('nama', 'asc')
                     ->get();
 
         if(count($msds) == 0){
@@ -145,7 +146,7 @@ class MsdsController extends Controller
      */
     public function edit($id)
     {
-        $msds = Msds::find($id);
+        $msds = Msds::where('id', $id)->orderBy('nama', 'asc')->get();
 
         $konten = json_decode($msds->content);
 
@@ -181,7 +182,7 @@ class MsdsController extends Controller
             'konten14' => 'required',
             'konten15' => 'required',
             'konten16' => 'required',
-            'konten17' => 'required',
+            // 'konten17' => 'required',
         ]);
 
         // $var1 = preg_replace( "/\r|\n/", '', $request->konten1 );
@@ -218,7 +219,7 @@ class MsdsController extends Controller
             'konten_14' => $request->konten14,
             'konten_15' => $request->konten15,
             'konten_16' => $request->konten16,
-            'konten_17' => $request->konten17,
+            // 'konten_17' => $request->konten17,
         );
 
         $msds = Msds::find($id);
