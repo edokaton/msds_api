@@ -146,7 +146,7 @@ class MsdsController extends Controller
      */
     public function edit($id)
     {
-        $msds = Msds::where('id', $id)->orderBy('nama', 'asc')->get();
+        $msds = Msds::find($id);
 
         $konten = json_decode($msds->content);
 
